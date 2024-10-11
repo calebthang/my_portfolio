@@ -189,6 +189,39 @@
         color: var(--primary-color);
       }
 
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .btn-download {
+        background-color: transparent;
+        border: 2px solid var(--white);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-download:hover {
+        background-color: var(--white);
+        color: var(--primary-color);
+      }
+
+      @media (max-width: 768px) {
+        .hero-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .btn {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+
       /* Projects Section Styles */
       .section {
         max-width: 1200px;
@@ -421,19 +454,25 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1>Caleb Thang</h1>
-          <p>Product Designer</p>
-          <p>
-            Products designer who desingns not only for look looks but deliver
+          <p class="hero-tagline">
+            Product Designer who designs not only for looks, but delivers
             meaningful results for users and businesses alike.
           </p>
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">Get in Touch</a>
             <a href="#projects" class="btn btn-secondary">View Projects</a>
+            <a
+              href="resume.pdf"
+              download="Caleb_Thang_Resume.md"
+              class="btn btn-download"
+            >
+              <i class="fas fa-download"></i> Download Resume
+            </a>
           </div>
         </div>
         <div class="profile-picture-container">
           <img
-            src="images/myphoto.JPG"
+            src="images/myphoto.jpg"
             alt="Caleb Thang - Product Designer"
             class="profile-picture"
           />
